@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('./font/Roboto.ttf') format('truetype');
+}
+
+.hello {
+  background: url('./img/firefox.svg');
+  font-family: 'MyFont';
+  color: red;
+}
