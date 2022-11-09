@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import './style.css';
 import imgplus from './images/plus.svg';
 import imgreload from './images/reload.svg';
@@ -24,6 +23,8 @@ class Task {
     this.completed = completed;
   }
 }
+
+const task = new Task(3, 'Coding', false);
 
 class Schedule {
 
@@ -51,9 +52,9 @@ class Schedule {
     const row = document.createElement('div');
     row.appendChild(myTrash);
     row.draggable = true;
-    row.style.display='flex';
-    row.style.justifyContent="space-between";
-    row.style.borderBottom="2px"
+    row.style.display = 'flex';
+    row.style.justifyContent = "space-between";
+    row.style.borderBottom = "2px"
 
     row.innerHTML = `
       <input type="checkbox" id="check">
