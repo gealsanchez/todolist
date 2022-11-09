@@ -17,11 +17,6 @@ plusDiv.appendChild(myPlus);
 const myTrash = new Image();
 myTrash.src = imgtrash;
 
-// task class
-
-
-//UI handle UI tasks
-
 class Task {
   constructor(index, description, completed) {
     this.index = index;
@@ -35,12 +30,12 @@ class Schedule {
   static displayTasks() {
     const taskSchedule = [
       {
-        index: '01',
+        index: 01,
         description: 'Write Lecture',
         completed: false,
       },
       {
-        index: '02',
+        index: 02,
         description: 'Write Letter',
         completed: false,
       },
