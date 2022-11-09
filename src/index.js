@@ -30,12 +30,12 @@ class Schedule {
   static displayTasks() {
     const taskSchedule = [
       {
-        index: 01,
+        index: 1,
         description: 'Write Lecture',
         completed: false,
       },
       {
-        index: 02,
+        index: 2,
         description: 'Write Letter',
         completed: false,
       },
