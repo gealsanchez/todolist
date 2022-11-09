@@ -25,6 +25,8 @@ body {
 .clear {
   display: flex;
   justify-content: center;
+  padding: 2%;
+  background-color: antiquewhite;
 }
 
 .reload img {
@@ -37,9 +39,4 @@ body {
 
 input {
   border: none;
-}
-
-.clear {
-  padding: 2%;
-  background-color: antiquewhite;
 }
