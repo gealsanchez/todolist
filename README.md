@@ -25,23 +25,13 @@ To get a local copy up and running follow these simple example steps.
 
 Download sources from [Githubhttps://github.com/gealsanchez/AwesomeBooks/awesomeBooks.zip) or throught the command: 
 ```
-git clone https://github.com/gealsanchez/AwesomeBooks.git
+git@github.com:gealsanchez/todolist.git
 
-```
-
-https://gealsanchez.github.io/AwesomeBooks/
+```https://github.com/gealsanchez/todolist/archive/refs/heads/main.zip
 
 ### Usage
 
 After downloading source on your local machine, you can simply edit the HTML and CSS files from the folder. To preview the changes you make to the code, you can open the index.html file in your web browser.
-
-[Go Live] (https://amentetteh.github.io/)
-
-### Deployment
-Deploy on any web hosting server cloud/in site and enjoy 
-
-https://gealsanchez.github.io/AwesomeBooks/
-
 
 ## Authors
 
@@ -53,18 +43,6 @@ https://gealsanchez.github.io/AwesomeBooks/
 
 
 ## 🤝 Contributing
-
-👤 **Amen TETTEH**
-
-- GitHub: [@amentetteh](https://github.com/amentetteh)
-- Twitter: [@amentetteh](https://twitter.com/amentetteh)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/amentetteh)
-
-👤 **Alqama Saeed**
-
-- GitHub: [@smas0900](https://github.com/smas0900)
-- Twitter: [@AlqamaSaeed](https://twitter.com/AlqamaSaeed)
-- LinkedIn: [AlqamaSaeed](linkedin.com/in/alqama-saeed-598086120)
 
 Contributions, issues, and feature requests are welcome!
 
