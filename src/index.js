@@ -17,7 +17,6 @@ const myTrash = new Image();
 myTrash.src = imgtrash;
 
 class Schedule {
-
   static displayTasks() {
     const taskSchedule = [
       {
@@ -43,8 +42,8 @@ class Schedule {
     row.appendChild(myTrash);
     row.draggable = true;
     row.style.display = 'flex';
-    row.style.justifyContent = "space-between";
-    row.style.borderBottom = "2px"
+    row.style.justifyContent = 'space-between';
+    row.style.borderBottom = '2px';
 
     row.innerHTML = `
       <input type="checkbox" id="check">
