@@ -40,3 +40,7 @@ body {
 input {
   border: none;
 }
+
+span {
+  display: none;
+}
