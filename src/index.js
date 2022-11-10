@@ -37,7 +37,6 @@ myPlus.addEventListener('click', () => {
 
 // event remove a task
 document.querySelector('.task-list').addEventListener('click', (e) => {
-
   if (e.target.classList.contains('stop')) {
     return;
   }
@@ -62,12 +61,10 @@ document.querySelector('.task-list').addEventListener('click', (e) => {
       Schedule.displayTasks();
     });
     return;
-  } else if(e.target.classList.contains('check')) {
-    return;
-  }
+  } 
 
   Schedule.deleteTask(e.target);
   Storage.removeTask(e.target.previousElementSibling.textContent);
   Storage.fixIndexArray();
   Schedule.displayTasks();
-})
+});
