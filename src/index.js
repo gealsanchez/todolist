@@ -61,10 +61,9 @@ document.querySelector('.task-list').addEventListener('click', (e) => {
     e.target.firstElementChild.select();
 
     myPencil.addEventListener('click', (e) => {
-      Storage.editTask(targetcode,editInput.value);
+      Storage.editTask(targetcode, editInput.value);
       Schedule.displayTasks();
     })
-
     return;
 
   } else if (e.target.classList.contains('check')) {
