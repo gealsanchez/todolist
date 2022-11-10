@@ -61,7 +61,7 @@ document.querySelector('.task-list').addEventListener('click', (e) => {
       Schedule.displayTasks();
     });
     return;
-  } 
+  }
 
   Schedule.deleteTask(e.target);
   Storage.removeTask(e.target.previousElementSibling.textContent);
