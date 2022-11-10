@@ -44,8 +44,6 @@ document.querySelector('.task-list').addEventListener('click', (e) => {
   }
 
   if (e.target.classList.contains('description')) {
-    console.log('descriptioning')
-    console.log(e.target.nextElementSibling.textContent)
     const targetcode = e.target.nextElementSibling.textContent;
     const editInput = document.createElement('input');
     editInput.setAttribute('type', 'text');
@@ -67,8 +65,6 @@ document.querySelector('.task-list').addEventListener('click', (e) => {
     return;
 
   } else if (e.target.classList.contains('check')) {
-    console.log('checking');
-    console.log(e.target.nextElementSibling.nextElementSibling.textContent)
     return;
   }
 
