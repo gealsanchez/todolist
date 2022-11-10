@@ -29,7 +29,7 @@ class Storage {
     const tasks = Storage.getTasks();
 
     tasks.forEach((task, index) => {
-      if (task.code === parseInt(code,10)) {
+      if (task.code === parseInt(code, 10)) {
         tasks.splice(index, 1);
       }
     });
@@ -42,7 +42,7 @@ class Storage {
     const list = document.querySelector('.task-list');
     list.innerHTML = '';
     tasks.forEach((task) => {
-      if (task.code === parseInt(code,10)) {
+      if (task.code === parseInt(code, 10)) {
         task.description = text;
       }
     });
