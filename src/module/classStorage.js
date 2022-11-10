@@ -1,5 +1,4 @@
 class Storage {
-
   static getTasks() {
     let tasks;
     if (localStorage.getItem('tasks') === null) {
@@ -42,7 +41,7 @@ class Storage {
     const tasks = Storage.getTasks();
     const list = document.querySelector('.task-list');
     list.innerHTML = '';
-    tasks.forEach((task, index) => {
+    tasks.forEach((task) => {
       if (task.code == code) {
         task.description = text;
       }

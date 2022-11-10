@@ -8,7 +8,7 @@ import imgpencil from './images/pencil.svg';
 
 const myPencil = new Image();
 myPencil.src = imgpencil;
-myPencil.className = 'stop'
+myPencil.className = 'stop';
 
 const reloadDiv = document.querySelector('.reload');
 const myReload = new Image();
@@ -26,17 +26,16 @@ document.addEventListener('DOMContentLoaded', Schedule.displayTasks);
 
 // event add a task
 
-myPlus.addEventListener('click', (e) => {
-  const tasktext = document.querySelector('#task-value').value; //get value
+myPlus.addEventListener('click', () => {
+  const tasktext = document.querySelector('#task-value').value; // get value
   const code = Storage.getTasks().length + 1;
   const task = new Task(code, tasktext, false); // create the object
   Schedule.addTaskToList(task); // add task to the screen list
   Storage.addTask(task); // Add task to the storage
   Schedule.clearInput();
-})
+});
 
 // event remove a task
-
 document.querySelector('.task-list').addEventListener('click', (e) => {
 
   if (e.target.classList.contains('stop')) {
@@ -58,13 +57,12 @@ document.querySelector('.task-list').addEventListener('click', (e) => {
     e.target.appendChild(myPencil);
     e.target.firstElementChild.select();
 
-    myPencil.addEventListener('click', (e) => {
+    myPencil.addEventListener('click', () => {
       Storage.editTask(targetcode, editInput.value);
       Schedule.displayTasks();
-    })
+    });
     return;
-
-  } else if (e.target.classList.contains('check')) {
+  } else if(e.target.classList.contains('check')) {
     return;
   }
 
