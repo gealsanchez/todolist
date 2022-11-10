@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('./font/Roboto.ttf') format('truetype');
+}
+
+body {
+  display: flex;
+  font-family: 'MyFont', sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+.task-form {
+  width: 30%;
+}
+
+.reload {
+  display: flex;
+}
+
+.plus {
+  display: flex;
+}
+
+.clear {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+  background-color: antiquewhite;
+}
+
+.reload img {
+  margin-left: auto;
+}
+
+.plus img {
+  margin-left: auto;
+}
+
+input {
+  border: none;
+}
