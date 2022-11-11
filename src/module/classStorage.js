@@ -48,6 +48,24 @@ class Storage {
     });
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }
+
+  static editCompletion(code, completed) {
+    const tasks = Storage.getTasks();
+    tasks.forEach((task) => {
+      if (task.code === parseInt(code, 10) && (completed)) {
+        task.completed = true;
+      } else if (task.code === parseInt(code, 10) && (!completed)) {
+        task.completed = false;
+      }
+    });
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }
+
+  static clearAllCompleted() {
+    const tasks = Storage.getTasks();
+    const completedDeleted = tasks.filter((item) => item.completed === false);
+    localStorage.setItem('tasks', JSON.stringify(completedDeleted));
+  }
 }
 
 export default Storage;

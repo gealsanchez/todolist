@@ -21,11 +21,9 @@ myPlus.src = imgplus;
 plusDiv.appendChild(myPlus);
 
 // event display tasks
-
 document.addEventListener('DOMContentLoaded', Schedule.displayTasks);
 
 // event add a task
-
 myPlus.addEventListener('click', () => {
   const tasktext = document.querySelector('#task-value').value; // get value
   const code = Storage.getTasks().length + 1;
@@ -63,8 +61,30 @@ document.querySelector('.task-list').addEventListener('click', (e) => {
     return;
   }
 
+  if (e.target.classList.contains('check')) {
+    const completion = e.target.checked;
+    if (completion) {
+      e.target.nextElementSibling.style = 'text-decoration: line-through';
+    } else { e.target.nextElementSibling.style = 'text-decoration: none'; }
+
+    Storage.editCompletion(e.target.nextElementSibling.nextElementSibling.textContent, completion);
+    return;
+  }
+
   Schedule.deleteTask(e.target);
   Storage.removeTask(e.target.previousElementSibling.textContent);
+  Storage.fixIndexArray();
+  Schedule.displayTasks();
+});
+
+document.querySelector('.clear').addEventListener('click', () => {
+  Storage.clearAllCompleted();
+  Storage.fixIndexArray();
+  Schedule.displayTasks();
+});
+
+document.querySelector('.reload').addEventListener('click', () => {
+  Storage.clearAllCompleted();
   Storage.fixIndexArray();
   Schedule.displayTasks();
 });
