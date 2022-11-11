@@ -65,7 +65,7 @@ document.querySelector('.task-list').addEventListener('click', (e) => {
     const completion = e.target.checked;
     if (completion) {
       e.target.nextElementSibling.style = 'text-decoration: line-through';
-    } else { e.target.nextElementSibling.style = 'text-decoration: none';}
+    } else { e.target.nextElementSibling.style = 'text-decoration: none'; }
 
     Storage.editCompletion(e.target.nextElementSibling.nextElementSibling.textContent, completion);
     return;
