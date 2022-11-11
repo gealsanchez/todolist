@@ -60,13 +60,15 @@ document.querySelector('.task-list').addEventListener('click', (e) => {
       Schedule.displayTasks();
     });
     return;
-  } else if (e.target.classList.contains('check')) {
+  }
+
+  if (e.target.classList.contains('check')) {
     const completion = e.target.checked;
     if (completion) {
-      e.target.nextElementSibling.style = 'text-decoration: line-through'
-    } else { e.target.nextElementSibling.style = 'text-decoration: none' }
+      e.target.nextElementSibling.style = 'text-decoration: line-through';
+    } else { e.target.nextElementSibling.style = 'text-decoration: none' };
 
-    Storage.editCompletion(e.target.nextElementSibling.nextElementSibling.textContent, completion)
+    Storage.editCompletion(e.target.nextElementSibling.nextElementSibling.textContent, completion);
     return;
   }
 
@@ -74,16 +76,16 @@ document.querySelector('.task-list').addEventListener('click', (e) => {
   Storage.removeTask(e.target.previousElementSibling.textContent);
   Storage.fixIndexArray();
   Schedule.displayTasks();
-})
+});
 
 document.querySelector('.clear').addEventListener('click', () => {
   Storage.clearAllCompleted();
   Storage.fixIndexArray();
   Schedule.displayTasks();
-})
+});
 
 document.querySelector('.reload').addEventListener('click', () => {
   Storage.clearAllCompleted();
   Storage.fixIndexArray();
   Schedule.displayTasks();
-})
+});
