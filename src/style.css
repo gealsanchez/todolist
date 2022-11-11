@@ -10,6 +10,10 @@ body {
   align-items: center;
 }
 
+body img {
+  cursor: pointer;
+}
+
 .task-form {
   width: 30%;
 }
@@ -27,6 +31,7 @@ body {
   justify-content: center;
   padding: 2%;
   background-color: antiquewhite;
+  cursor: pointer;
 }
 
 .reload img {

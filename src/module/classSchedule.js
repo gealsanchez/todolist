@@ -1,5 +1,4 @@
 import Storage from './classStorage.js';
-
 import imgtrash from '../images/trash.svg';
 
 const myTrash = new Image();
