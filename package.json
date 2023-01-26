@@ -4,7 +4,7 @@
   "description": "To Do list: list structure",
   "private": true,
   "scripts": {
-    "test": "jest",
+    "test": "jest --env=jsdom",
     "start": "webpack serve --open",
     "build": "webpack"
   },
